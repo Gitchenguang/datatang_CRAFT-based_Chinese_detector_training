@@ -1,6 +1,6 @@
 # CRAFT-based Chinese words detector training
 ---------------------------------------------------------------
-[Chinese version](https://github.com/datatang-ailab//blob/master/README.zh.md)
+[Chinese version](https://github.com/datatang-ailab/datatang_CRAFT-based_Chinese_detector_training/blob/master/README.zh.md)
 ## Description
 ---------------------------------------------------------------
 -Test environment:Ubuntu 16.04
