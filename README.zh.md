@@ -44,12 +44,12 @@ pip install -r requirements.txt
 ### 训练详解
 训练共分为两个步骤：准备数据，运行训练脚本。数据这里使用的包括中文和英文混合训练。
 #### 下载与解压数据集
-中英文数据使用的分别是CTW数据集和SynthText数据集。下载链接参照下面官网地址：
-[CTW官方网站](https://ctwdataset.github.io/)
-[SynthText官方网站](http://www.robots.ox.ac.uk/~vgg/data/scenetext/)
-[SynthText项目链接](https://github.com/ankush-me/SynthText)
-**简要介绍**
-CTW数据集主要包含32285张图片，共计1018402个汉字，3850个汉字类别，来自清华-腾讯100K数据集和腾讯街景数据集，图片大小为2048x2048。在相关论文《Chinese Text in the Wild》中，清华大学的研究人员以该数据集为基础训练了多种目前业内最先进的深度模型进行字符识别和字符检测。这些模型将作为基线算法为人们提供测试标准。这些图像源于腾讯街景，从中国的几十个不同城市中捕捉得到，不带任何特定目的的偏好。由于其多样性和复杂性，使得该数据集的收集很困难。它包含了平面文本、凸出文本、城市街景文本、乡镇街景文本、弱照明条件下的文本、远距离文本、部分显示文本等。对于每张图像，数据集中都标注了所有中文字符。对每个中文字符，数据集都标注了其真实字符、边界框和 6 个属性以指出其是否被遮挡、有复杂的背景、被扭曲、3D 凸出、艺术化，和手写体等。
+中英文数据使用的分别是CTW数据集和SynthText数据集。下载链接参照下面官网地址：  
+[CTW官方网站](https://ctwdataset.github.io/)  
+[SynthText官方网站](http://www.robots.ox.ac.uk/~vgg/data/scenetext/)  
+[SynthText项目链接](https://github.com/ankush-me/SynthText)  
+**简要介绍**  
+CTW数据集主要包含32285张图片，共计1018402个汉字，3850个汉字类别，来自清华-腾讯100K数据集和腾讯街景数据集，图片大小为2048x2048。在相关论文《Chinese Text in the Wild》中，清华大学的研究人员以该数据集为基础训练了多种目前业内最先进的深度模型进行字符识别和字符检测。这些模型将作为基线算法为人们提供测试标准。这些图像源于腾讯街景，从中国的几十个不同城市中捕捉得到，不带任何特定目的的偏好。由于其多样性和复杂性，使得该数据集的收集很困难。它包含了平面文本、凸出文本、城市街景文本、乡镇街景文本、弱照明条件下的文本、远距离文本、部分显示文本等。对于每张图像，数据集中都标注了所有中文字符。对每个中文字符，数据集都标注了其真实字符、边界框和 6 个属性以指出其是否被遮挡、有复杂的背景、被扭曲、3D 凸出、艺术化，和手写体等。  
 SynthText数据集是一个包含单词的自然场景图像组成的数据集，主要运用于自然场景领域中的文本检测，SynthText数据集由80万个图像组成，大约有800万个合成单词实例。每个文本实例都使用其文本字符串，字级和字符级边界框进行注释。SynthText 数据集于 2016 年由牛津大学工程科学系视觉几何组的 Gupta, A. and Vedaldi, A. and Zisserman, A. 在 IEEE 计算机视觉和模式识别会议 (CVPR) 中发布。
 #### 数据准备
 下载完成的数据集需要转换存储格式，转换格式的脚本存放在**converts**文件夹内。使用时更换脚本中的路径即可。
@@ -68,7 +68,7 @@ python converts/synth_convert.py
 - 更快的收敛可以缩短训练时长 
 我们使用linear代替sigmoid，输入图片调整到800x800尺寸。训练数据集使用英文和中文混合数据，其中可以自行设定中英文比例。
 
-以我们实验经验，用NVIDIA 1080TI/Tesla V100显卡的batch size可以设置为8并且减小图像大小可以适当的增大batch size。在训练阶段，每过30K步学习率乘以0.64有利于loss的稳定下降。 初始学习率设置和batch size有关，batch越大学习率越大比较能收敛，这里batch size=8参考学习率0.00001.
+以我们实验经验，用NVIDIA 1080TI/Tesla V100显卡的batch size可以设置为8并且减小图像大小可以适当的增大batch size。在训练阶段，每过30K步学习率乘以0.64有利于loss的稳定下降。 初始学习率设置和batch size有关，batch越大学习率越大比较能收敛，这里batch size=8参考学习率0.00001.  
 设置好参数之后运行：
 ```shell
 python train.py
@@ -76,8 +76,8 @@ python train.py
 
 ### 推理过程
 下载训练好的权重
-[Pan.Baidu]() 
-推理过程我们提供字符级、字级、行级三种结果，可以在**inference_util.py**中选择需要的检测类型。
+[Pan.Baidu]()   
+推理过程我们提供字符级、字级、行级三种结果，可以在**inference_util.py**中选择需要的检测类型。  
 测试并生成demo图、演示热力图以及json结果：
 ```shell
 python test_json.py
@@ -87,7 +87,7 @@ python test_json.py
 python compute_PPR.py 
 ```
 ### 实验总结
-使用CTW以及SynthText混合数据训练，在两个数据集的测试集上分别测试，结果如下：
+使用CTW以及SynthText混合数据训练，在两个数据集的测试集上分别测试，结果如下：  
 i. Official 是官方发布的模型，Original是对照试验里面原版训练程序，Modification是微调过的训练程序。
 
 |OCR Detection Training| \ |Official|Official|Original |Original |Modification|Modification|
@@ -104,6 +104,7 @@ i. Official 是官方发布的模型，Original是对照试验里面原版训练
 |                      |7  |76.5%   |26.0%   |**80.1%**|28.7%    |79.6%       |**32.9%**   |
 |                      |8  |79.1%   |28.5%   |**83.3%**|32.6%    |82.3%       |**37.0%**   |
 |Mean Pixel Diff(MPD)  | \ |3.0     |19.4    |**2.7**  |23.3     |2.8         |**19.2**    |
+
 从试验结果分析：
 - 官方发布模型在PPR低时有更好的表现，但在平均贴合度略高，预测结果与ground truth之差的分布方差较大
 - 使用sigmoid模型收敛效果并不理想。
