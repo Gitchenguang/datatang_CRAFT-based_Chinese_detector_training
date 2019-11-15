@@ -1,20 +1,16 @@
 # CRAFT-based Chinese words detector training
----------------------------------------------------------------
+
 [Chinese version](https://github.com/datatang-ailab/datatang_CRAFT-based_Chinese_detector_training/blob/master/README.zh.md)
 ## Description
----------------------------------------------------------------
+
 -Test environment:Ubuntu 16.04
 -Instruction: this is a sample of CRAFT training experiment in Chinese dataset, Datatang open source Chinese Mandarin Corpus
 -Update time of document: November 13,2019
 ## Introdution of CRAFT
----------------------------------------------------------------
- Implementation of CRAFT text detector [paper](https://arxiv.org/abs/1904.01941)
- CRAFT text detector effectively detect text area by exploring each character region and affinity between characters. The bounding box of texts are obtained by simply finding minimum bounding rectangles on binary map after thresholding character region and affinity scores.
- [Offical inference project](https://github.com/clovaai/CRAFT-pytorch)
- [Originl training project](https://github.com/RubanSeven/CRAFT_keras)
+Implementation of CRAFT text detector [paper](https://arxiv.org/abs/1904.01941). Our aim is training a Chinese detector with CRAFT,[Here is offical inference project](https://github.com/clovaai/CRAFT-pytorch),[Here is training project we reference](https://github.com/RubanSeven/CRAFT_keras). We did a little change in original training model and make a comparative experiment.
 
 ## Installation
----------------------------------------------------------------
+
 ### Install dependence(Recomend Anaconda)
 Install anaconda first.
 Create conda environment
@@ -31,9 +27,10 @@ pip install -r requirements.txt
 ```
 
 ## training
----------------------------------------------------------------
+
 ### General Overview
-There are several folders and files under project, and their brief introductions are as follows:
+There are several folders and files under project, and their brief introductions are as follows：
+
 |Folder        |Description     |Remark                  |
 |:-------------|:---------------|:-----------------------|
 |converts      |Script directory|transform data format   |
@@ -44,6 +41,7 @@ There are several folders and files under project, and their brief introductions
 |compute_PPR.py|General scripts |analyze trained model   |
 |test_json.py  |General scripts |generate demo results   |
 |train.py      |General scripts |training program        |
+
 ### Detailed explanation of training
 Training phase could be separated into two parts: prepare datasets and run training script. 
 #### Download and decompression of data set
@@ -115,7 +113,7 @@ analyze:
  - It has a strong relation between dataset and test results. CTW is a hard sample with much shelter and difficult to recognize even for a human.  
 
 ## More Resource
----------------------------------------------------------------
+
 Datatang (Beijing) Technology Co., Ltd is a professional AI data service provider and is dedicated to providing data collection, processing and data product services for global artificial intelligence enterprises, covering data types such as speech, image and text, including biometrics, speech recognition, autonomous driving, smart home, smart manufacturing, new retail, OCR scene, smart medical treatment, smart transportation, smart security, mobile phone entertainment, etc.
 
 [For more open source data sets](https://www.datatang.com/webfront/opensource.html)
