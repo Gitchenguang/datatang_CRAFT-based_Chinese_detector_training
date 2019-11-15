@@ -29,16 +29,16 @@ pip install -r requirements.txt
 ## CRAFT训练
 ### 总体概览
 项目文件简要描述:  
-|文件夹         |描述            |简介                    |  
-|--------------|----------------|------------------------|  
-|converts      |Script directory|transform data format   |  
-|module        |Model scripts   |model modules           |  
-|net           |Model scripts   |VGG16 net backbone      |  
-|utils         |Script directory|inference&training utils|  
-|weights       |Model weights   |weights folder          |  
-|compute_PPR.py|General scripts |analyze trained model   |  
-|test_json.py  |General scripts |generate demo results   |  
-|train.py      |General scripts |training program        |
+| 文件夹          | 描述             | 简介                     |  
+| -------------- | ---------------- | ------------------------ |  
+| converts       | Script directory | transform data format    |  
+| module         | Model scripts    | model modules            |  
+| net            | Model scripts    | VGG16 net backbone       |  
+| utils          | Script directory | inference&training utils |  
+| weights        | Model weights    | weights folder           |  
+| compute_PPR.py | General scripts  | analyze trained model    |  
+| test_json.py   | General scripts  | generate demo results    |  
+| train.py       | General scripts  | training program         |
 ### 训练详解
 训练共分为两个步骤：准备数据，运行训练脚本。数据这里使用的包括中文和英文混合训练。
 #### 下载与解压数据集
