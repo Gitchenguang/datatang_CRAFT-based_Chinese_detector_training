@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ### 总体概览
 项目文件简要描述:  
 |文件夹         |描述            |简介                    |  
-|:-------------|:---------------|:-----------------------|  
+|--------------|----------------|------------------------|  
 |converts      |Script directory|transform data format   |  
 |module        |Model scripts   |model modules           |  
 |net           |Model scripts   |VGG16 net backbone      |  
