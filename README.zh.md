@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ## CRAFT训练
 ### 总体概览
-项目文件简要描述:
+项目文件简要描述:  
 |文件夹         |描述            |简介                    |
 |:-------------|:---------------|:-----------------------|
 |converts      |Script directory|transform data format   |
