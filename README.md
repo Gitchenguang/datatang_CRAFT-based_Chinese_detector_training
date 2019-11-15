@@ -3,9 +3,9 @@
 [Chinese version](https://github.com/datatang-ailab/datatang_CRAFT-based_Chinese_detector_training/blob/master/README.zh.md)
 ## Description
 
--Test environment:Ubuntu 16.04
--Instruction: this is a sample of CRAFT training experiment in Chinese dataset, Datatang open source Chinese Mandarin Corpus
--Update time of document: November 13,2019
+- Test environment:Ubuntu 16.04
+- Instruction: this is a sample of CRAFT training experiment in Chinese dataset, Datatang open source Chinese Mandarin Corpus
+- Update time of document: November 13,2019
 ## Introdution of CRAFT
 Implementation of CRAFT text detector [paper](https://arxiv.org/abs/1904.01941). Our aim is training a Chinese detector with CRAFT,[Here is offical inference project](https://github.com/clovaai/CRAFT-pytorch),[Here is training project we reference](https://github.com/RubanSeven/CRAFT_keras). We did a little change in original training model and make a comparative experiment.
 
@@ -45,16 +45,15 @@ There are several folders and files under project, and their brief introductions
 ### Detailed explanation of training
 Training phase could be separated into two parts: prepare datasets and run training script. 
 #### Download and decompression of data set
-Download two datasets from urls below:
-[CTW官方网站](https://ctwdataset.github.io/)
-[SynthText官方网站](http://www.robots.ox.ac.uk/~vgg/data/scenetext/)
+Download two datasets from urls below:  
+[CTW官方网站](https://ctwdataset.github.io/)  
+[SynthText官方网站](http://www.robots.ox.ac.uk/~vgg/data/scenetext/)  
 [SynthText项目链接](https://github.com/ankush-me/SynthText)
 **Introduction**
- CTW provides details of a newly created dataset of Chinese text with about 1 million Chinese characters from 3850 unique ones annotated by experts in over 30000 street view images. This is a challenging dataset with good diversity containing planar text, raised text, text under poor illumination, distant text, partially occluded text, etc. 
- SynthText is a synthetically generated dataset, in which word instances are placed in natural scene images, while taking into account the scene layout.
- The dataset consists of 800 thousand images with approximately 8 million synthetic word instances. Each text instance is annotated with its text-string, word-level and character-level bounding-boxes. 
+ CTW provides details of a newly created dataset of Chinese text with about 1 million Chinese characters from 3850 unique ones annotated by experts in over 30000 street view images. This is a challenging dataset with good diversity containing planar text, raised text, text under poor illumination, distant text, partially occluded text, etc.   
+ SynthText is a synthetically generated dataset, in which word instances are placed in natural scene images, while taking into account the scene layout.The dataset consists of 800 thousand images with approximately 8 million synthetic word instances. Each text instance is annotated with its text-string, word-level and character-level bounding-boxes. 
 #### Data preparation
-Using follow scripts could converte dataset into specified format.
+Using follow scripts could converte dataset into specified format.  
 CTW dataset
 ```shell
 python converts/CTW_convert.py
@@ -76,8 +75,6 @@ Run:
 python train.py
 ```
 ### Inference
-Download pretrained model
-[Pan.Baidu]() 
 We provide three kinds detector for inference phase: character level, word level, line level. You can choose one of them in **inference_util.py**
 Get demo, heatmap and json file by running:
 ```shell
