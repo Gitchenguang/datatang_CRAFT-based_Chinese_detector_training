@@ -5,9 +5,9 @@
 - 介绍: this is a sample of CRAFT training experiment in Chinese dataset, Datatang open source Chinese Mandarin Corpus
 - 文档更新时间: November 13,2019
 ## CRAFT说明
- 本项目是CRAFT论文的复现[原文](https://arxiv.org/abs/1904.01941)
- CRAFT text detector effectively detect text area by exploring each character region and affinity between characters. The bounding box of texts are obtained by simply finding minimum bounding rectangles on binary map after thresholding character region and affinity scores.
- [官方推理项目](https://github.com/clovaai/CRAFT-pytorch)
+ 本项目是CRAFT论文的复现[原文](https://arxiv.org/abs/1904.01941)  
+ CRAFT text detector effectively detect text area by exploring each character region and affinity between characters. The bounding box of texts are obtained by simply finding minimum bounding rectangles on binary map after thresholding character region and affinity scores.  
+ [官方推理项目](https://github.com/clovaai/CRAFT-pytorch)  
  [原始训练项目](https://github.com/RubanSeven/CRAFT_keras)
 
 ## 安装
