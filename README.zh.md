@@ -73,8 +73,6 @@ python train.py
 ```
 
 ### 推理过程
-下载训练好的权重
-[Pan.Baidu]()   
 推理过程我们提供字符级、字级、行级三种结果，可以在**inference_util.py**中选择需要的检测类型。  
 测试并生成demo图、演示热力图以及json结果：
 ```shell
