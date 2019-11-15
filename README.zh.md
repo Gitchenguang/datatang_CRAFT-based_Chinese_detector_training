@@ -1,6 +1,6 @@
 # 基于CRAFT的中文字符检测
 ---------------------------------------------------------------
-[English version](https://github.com/datatang-ailab//blob/master/README.md)
+[English version](https://github.com/datatang-ailab/datatang_CRAFT-based_Chinese_detector_training/blob/master/README.md)
 ## 简介
 ---------------------------------------------------------------
 -测试环境:Ubuntu 16.04
