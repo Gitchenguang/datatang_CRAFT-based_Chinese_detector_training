@@ -112,6 +112,6 @@ i. Official 是官方发布的模型，Original是对照试验里面原版训练
 ## 更多资源
 数据堂是一家专业的人工智能数据服务提供商，致力于为全球人工智能企业提供数据获取、处理及数据产品服务，覆盖语音、图像、文本等数据类型，涵盖生物识别、语音识别、自动驾驶、智能家居、智能制造、新零售、OCR场景、智能医疗、智能交通、智能安防、手机娱乐等领域。
 
-获取更多开源数据集，请访问[这里](https://www.datatang.com/webfront/opensource.html)
-了解更多商业数据集，请点击[这里](https://www.datatang.com/webfront/datatang_dataset.html)
+获取更多开源数据集，请访问[这里](https://www.datatang.com/webfront/opensource.html)  
+了解更多商业数据集，请点击[这里](https://www.datatang.com/webfront/datatang_dataset.html)  
 面向高校及科研群体,数据堂将持续开源更多高质量商业数据集,帮助研究人员拓宽研究领域，丰富研究内容，加速迭代。敬请期待！
