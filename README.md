@@ -46,9 +46,9 @@ There are several folders and files under project, and their brief introductions
 Training phase could be separated into two parts: prepare datasets and run training script. 
 #### Download and decompression of data set
 Download two datasets from urls below:  
-[CTW官方网站](https://ctwdataset.github.io/)  
-[SynthText官方网站](http://www.robots.ox.ac.uk/~vgg/data/scenetext/)  
-[SynthText项目链接](https://github.com/ankush-me/SynthText)
+[CTW official web](https://ctwdataset.github.io/)  
+[SynthText official web](http://www.robots.ox.ac.uk/~vgg/data/scenetext/)  
+[SynthText project link](https://github.com/ankush-me/SynthText)
 **Introduction**
  CTW provides details of a newly created dataset of Chinese text with about 1 million Chinese characters from 3850 unique ones annotated by experts in over 30000 street view images. This is a challenging dataset with good diversity containing planar text, raised text, text under poor illumination, distant text, partially occluded text, etc.   
  SynthText is a synthetically generated dataset, in which word instances are placed in natural scene images, while taking into account the scene layout.The dataset consists of 800 thousand images with approximately 8 million synthetic word instances. Each text instance is annotated with its text-string, word-level and character-level bounding-boxes. 
